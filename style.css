@@ -18,7 +18,10 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Outfit', sans-serif;
@@ -26,6 +29,7 @@ body {
     background: var(--bg-white);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -623,19 +627,56 @@ header.scrolled .header-logo {
 .animate-right { transform: translateX(40px); }
 .appear { opacity: 1; transform: translate(0, 0); }
 
-/* Mobile */
+/* Mobile Responsive Refinement */
 @media (max-width: 1024px) {
     .nav-links { display: none; }
-    .about-wrapper, .location-card, .process-steps { flex-direction: column; grid-template-columns: 1fr; }
+    .about-wrapper, .location-card, .process-steps, .highlight-grid, .tab-grid, .services-grid-detailed { 
+        flex-direction: column; 
+        grid-template-columns: 1fr; 
+    }
+    
     .location-info { padding: 3rem; }
     .location-map { height: 400px; }
     .hero-stats { gap: 2rem; }
+    
+    .highlight-card { padding: 2rem; gap: 1.5rem; }
+    .highlight-icon { width: 60px; height: 60px; font-size: 1.5rem; }
+    
+    section { padding: 80px 0; }
+    .hero { padding: 100px 0; }
 }
 
-@media (max-width: 600px) {
-    .whatsapp-float-premium .float-text { display: none; }
-    .whatsapp-float-premium { padding: 0.5rem; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero-btns { flex-direction: column; }
-    .about-features-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+    .header-actions .btn { display: none; } /* Hide secondary CTA on small mobiles */
+    .mobile-menu-btn { margin-left: auto; }
+    
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    .hero-btns { flex-direction: column; width: 100%; }
+    .btn { width: 100%; }
+    
+    .hero-background img.hero-banner-img { padding: 20% 5%; opacity: 0.9; }
+    
+    .specialties-highlight { margin-top: 0; padding: 40px 0; }
+    
+    .case-image { aspect-ratio: 4 / 3; }
+    .case-labels span { padding: 0.4rem 1rem; font-size: 0.65rem; }
+    
+    .footer-content { flex-direction: column; text-align: center; gap: 2rem; }
+    
+    .whatsapp-float-premium {
+        bottom: 20px;
+        right: 20px;
+        padding: 0.5rem;
+    }
+    .float-text { display: none; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8rem; }
+    .section-header h2 { font-size: 1.6rem; }
+    .logo img { height: 45px; }
+    
+    .service-group, .highlight-card { padding: 1.5rem; }
+    .service-group h4 { font-size: 1.2rem; }
 }
