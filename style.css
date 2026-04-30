@@ -1,6 +1,7 @@
 :root {
     --primary: #2dafb7; 
     --primary-dark: #248e94;
+    --primary-light: #e6f7f8;
     --primary-glow: rgba(45, 175, 183, 0.4);
     --secondary: #0f172a;
     --accent: #f59e0b;
@@ -232,6 +233,110 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 @keyframes scroll {
     0% { opacity: 1; transform: translate(-50%, 0); }
     100% { opacity: 0; transform: translate(-50%, 15px); }
+}
+
+/* Specialties Highlight */
+.specialties-highlight {
+    padding: 60px 0;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: 32px;
+    display: flex;
+    gap: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(45, 175, 183, 0.1);
+    transition: var(--transition);
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.highlight-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 2rem;
+}
+
+.highlight-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+/* Service Groups (Tabs/Lists) */
+.services-tabs {
+    margin-bottom: 60px;
+}
+
+.tab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-group {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+.service-group h4 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.service-group ul {
+    list-style: none;
+}
+
+.service-group li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bg-soft);
+    font-weight: 500;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.service-group li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.service-group li:last-child { border-bottom: none; }
+
+.services-grid-detailed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
 }
 
 /* Services Section */
