@@ -666,6 +666,9 @@ header.scrolled .header-logo {
     
     .hero-background img.hero-banner-img { padding: 20% 5%; opacity: 0.9; }
     
+    .location-btns { flex-direction: column; gap: 1rem; width: 100%; }
+    .location-btns .btn { width: 100%; }
+    
     .specialties-highlight { margin-top: 0; padding: 40px 0; }
     
     .case-image { aspect-ratio: 4 / 3; }
