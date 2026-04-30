@@ -644,6 +644,15 @@ header.scrolled .header-logo {
     
     section { padding: 80px 0; }
     .hero { padding: 100px 0; }
+    
+    .floating-badge {
+        top: auto;
+        bottom: -20px;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 1rem;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 768px) {
